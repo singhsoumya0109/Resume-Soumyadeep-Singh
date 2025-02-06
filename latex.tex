@@ -1,0 +1,328 @@
+%-------------------------
+% Resume in Latex
+% Author : Abey George
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% \pagestyle{fancy}
+% \fancyhf{}  % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+
+% \begin{center}
+%     {\Huge \scshape SOUMYADEEP SINGH} \\ \vspace{1pt}
+%     Kolkata,West Bengal \\ \vspace{1pt}
+%     \small \href{tel:+91 9046431718}{ \raisebox{-0.1\height}\faPhone\ \underline{+91-9046431718} ~} \href{mailto:singhsoumya1103@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{singhsoumya1103@gmail.com}} ~ 
+%     \href{https://linkedin.com/in/soumyadeep-singh-347044258}{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{Linkedin}}  ~
+%     \href{https://github.com/singhsoumya0109}{\raisebox{-0.2\height}\faGithub\ \underline{GitHub}} ~
+%     \href{https://leetcode.com/u/Soumyadeep_Singh2004/}{\raisebox{-0.2\height}\faLeetcode\ \underline{Leetcode}} ~
+%     % \href{https://www.hackerrank.com/yourid}{\raisebox{-0.2\height}\faHackerrank\ \underline{yourid}} ~
+%     \href{https://codeforces.com/profile/singhsoumya_coder}{\raisebox{-0.2\height}\faPoll\ \underline{Codeforces}}
+%     \vspace{-8pt}
+% \end{center}
+
+
+\begin{center}
+    {\Huge \scshape SOUMYADEEP SINGH} \\ \vspace{1pt}
+    Kolkata, West Bengal \\ \vspace{1pt}
+    \small \href{mailto:singhsoumya1103@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{singhsoumya1103@gmail.com}} ~ 
+    \href{https://linkedin.com/in/soumyadeep-singh-347044258}{\raisebox{-0.2\height}\faLinkedinSquare\ \underline{Linkedin}}  ~
+    \href{https://github.com/singhsoumya0109}{\raisebox{-0.2\height}\faGithub\ \underline{GitHub}} ~
+    \href{https://leetcode.com/u/Soumyadeep_Singh2004/}{\raisebox{-0.2\height}\faLeetcode\ \underline{Leetcode}} ~
+    \href{https://codeforces.com/profile/singhsoumya_coder}{\raisebox{-0.2\height}\faPoll\ \underline{Codeforces}} ~
+    \href{https://singhsoumya0109.github.io/Portfolio-website/}{\raisebox{-0.2\height}\faGlobe\ \underline{Portfolio}}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Jadavpur University}{2022-2026}
+      {Btech in CSE - \textbf{CGPA} - \textbf{8.1  (Till 4th semester)}}{Kolkata, West Bengal}
+  \resumeSubHeadingListEnd
+  
+  \resumeSubHeadingListStart
+    \resumeSubheading
+        {Mary Immaculate School}{2008-2022}
+        {Class 10 \textbf{Percentage} - \textbf{94\%}}{Berhampore, West Bengal}
+        \resumeItem{\normalsize{Class 12 \textbf{Percentage} - \textbf{95\%}}}
+\resumeSubHeadingListEnd
+
+
+%------RELEVANT COURSEWORK-------
+\section{COURSEWORK / SKILLS}
+    %\resumeSubHeadingListStart
+        \begin{multicols}{4}
+            \begin{itemize}[itemsep=-2pt, parsep=5pt]
+                \item Data Structures \& Algorithms
+                \item Full Stack Web Development
+                \item Operating Systems
+                \item Computer Networks
+                % \item Database Management System (DBMS)
+                % \item Artificial Intelligence
+                \item OOPS Concept
+                
+                % \item Android Development
+            \end{itemize}
+        \end{multicols}
+        \vspace*{2.0\multicolsep}
+    %\resumeSubHeadingListEnd
+
+
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+
+
+    \resumeProjectHeading
+    {\href{https://luxury-lodgings-in-india.onrender.com/}{\textbf{\large{\underline{Hotels and Resorts in India}}}} \href{Project Link}{\raisebox{-0.1\height}{\faExternalLink}} $|$ \large{\underline{HTML, JavaScript, CSS, MongoDB, EJS, Node.js}}}{2024}
+\resumeItemListStart
+\resumeItem{\textbf{Hotel and Resort Management System:} A complete full-stack web application allowing users to add, review, rate, and book hotels and resorts in India, enhancing user choices and experiences.}
+\resumeItem{\textbf{Modern Web Technologies:} Built with \textbf{HTML, CSS, JavaScript} for a responsive frontend. \textbf{Node.js} and \textbf{MongoDB} manage backend operations and data storage. \textbf{EJS} dynamically generates HTML.}
+\resumeItem{\textbf{Photo Upload and Display:} Utilized \textbf{Cloudinary} to store and manage images on the cloud, enhancing the listing and review experience.}
+\resumeItem{\textbf{Booking Functionality:} Implemented a hotel booking feature, allowing users to make reservations directly through the platform.}
+\resumeItem{\textbf{Deployment:} Successfully deployed the application, making it accessible for users.}
+\resumeItem{\textbf{GitHub Repository:} Project source code is available on GitHub \href{https://github.com/singhsoumya0109/Luxury-Lodgings-in-India}{\textbf{{repo link}}}.}
+
+\resumeItemListEnd
+\vspace{-16pt}
+
+      \resumeProjectHeading
+    {\href{https://singhsoumya0109.github.io/Infinite-Tic-Tac-Toe/}{\textbf{\large{\underline{Infinite Tic-Tac-Toe}}} \href{Project Link}{\raisebox{-0.1\height}{\faExternalLink}}} $|$ \large{\underline{\textbf{HTML5, CSS3, JavaScript (with DOM)}}}}{2023}
+\resumeItemListStart
+    \resumeItem{\normalsize{Developed Infinite Tic-Tac-Toe with two game modes: \textbf{Standard} and \textbf{Disappearing Moves}.}}
+    \resumeItem{\normalsize{Integrated \textbf{HTML5} for structure, \textbf{CSS3} for responsive design, and \textbf{JavaScript (with DOM)} for interactive gameplay and dynamic updates.}}
+    \resumeItem{\normalsize{Implemented game logic including turn management, win detection, and draw conditions for a seamless gaming experience.}}
+    \resumeItem{\normalsize{Designed a user-friendly interface with a turn indicator and easy game reset functionality.}}
+    \resumeItem{\textbf{GitHub Repository:} Project source code is available on GitHub \href{https://github.com/singhsoumya0109/Infinite-Tic-Tac-Toe}{\textbf{{repo link}}}.}
+\resumeItemListEnd
+\vspace{-14pt}
+
+
+
+
+
+
+        
+
+        
+
+
+          
+       
+
+
+
+          
+          
+     
+          
+    \resumeSubHeadingListEnd
+\vspace{-2pt}
+
+%
+
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{TECHNICAL SKILLS}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{\normalsize{Languages:}}{ \normalsize{C/C++, Java, Python, HTML, CSS, JavaScript, SQL, NoSQL, React}} \\
+     \textbf{\normalsize{Developer Tools:}}{ \normalsize{VS Code, IntelliJ IDEA Ultimate}} \\
+     \textbf{\normalsize{Technologies/Frameworks:}}{\normalsize{ Linux, Unix, GitHub, Node.js, Express.js, Git, MongoDB}} \\
+     \textbf{\normalsize{Domains:}}{ \normalsize{ Full Stack Web Development, Competitive Programming, Machine Learning}} \\
+    }}
+\end{itemize}
+\vspace{-20pt}  % Adjusted spacing
+
+%----------------------------------------------------------------------------------------
+% HONORS & AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Honors \& Awards}
+\begin{itemize}[itemsep=-2pt]
+    \item Secured \textbf{first position} in GDSC Competitive Programming Contest among second-year students. (2023)
+    \item \textbf{Rank: 6222 in JEE MAINS, 99.32 percentile}. (2022)
+    \item Achieved \textbf{first place} with a line-following robot in the \textbf{'HOMECOMING'} competition at \textbf{Srijan on 23rd March 2024 }\href{https://github.com/singhsoumya0109/SmartLineFollower}{\textbf{[repo link]}} \href{https://drive.google.com/file/d/1VlpsUwGK9Am_KnDUDGkXyRutjbG_9k7a/view?usp=sharing}{\textbf{[Let's see how it follows!!!]}}.
+\end{itemize}
+\vspace{-15pt}  % Adjusted spacing
+
+
+
+
+%----------------------------------------------------------------------------------------
+% ACHIEVEMENTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Achievements}
+\begin{itemize}[itemsep=-2pt]
+    \item \textbf{Solved 1100+} problems on LeetCode: \href{https://leetcode.com/u/SoumyadeepSingh2004/}{\textbf{Profile Link}}
+    \item \textbf{Knight} in LeetCode contests: Rating: 2084 \textbf{(Top 1.78 percent)}
+    % \item \textbf{3* at CodeChef}: Rating: 1751 \href{https://www.codechef.com/users/singhsoumya998}{\textbf{Profile Link}}
+    \item \textbf{Specialist} at Codeforces: Rating: 1448 \href{https://codeforces.com/profile/singhsoumya_coder}{\textbf{Profile Link}}
+\end{itemize}
+\vspace{-15pt}  % Adjusted spacing
+
+%-----------CERTIFICATIONS---------------
+% \section{CERTIFICATIONS}
+% $\sbullet[.75] \hspace{0.2cm}${\href{https://drive.google.com/file/d/1a3b11Yx__kOCYqsS7QSPmlZqC7uJklDG/view?usp=sharing}{Machine Learning A-Z}} \\
+% $\sbullet[.75] \hspace{0.2cm}${\href{https://drive.google.com/file/d/1cON30pFpzL2RnfLie4Q1ex5S6EC8GORh/view?usp=sharing}{The Web Developer
+% Bootcamp 2024}} \\
+
+\section{CERTIFICATIONS}
+\begin{minipage}{0.5\textwidth}
+    $\sbullet[.75] \hspace{0.2cm}${\href{https://drive.google.com/file/d/1a3b11Yx__kOCYqsS7QSPmlZqC7uJklDG/view?usp=sharing}{Machine Learning A-Z}}
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+    $\sbullet[.75] \hspace{0.2cm}${\href{https://drive.google.com/file/d/1cON30pFpzL2RnfLie4Q1ex5S6EC8GORh/view?usp=sharing}{The Web Developer Bootcamp 2024}}
+\end{minipage}
+
+
+
+   
+\end{itemize}
+
+\end{document}
